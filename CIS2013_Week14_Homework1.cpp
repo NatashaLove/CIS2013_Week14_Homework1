@@ -190,6 +190,6 @@ int main() {
 	
 		minesweeper.print ();
 	}
-	cin >> name;
+	//cin >> name;
 	return 0;
 }
