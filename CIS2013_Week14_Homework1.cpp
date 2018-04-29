@@ -171,7 +171,9 @@ int main() {
 	
 	MineSweeper minesweeper (name, width, height, mines_count);
 	
-	cout << "Playing " << minesweeper.getName () << endl;
+	cout << "			********************************************************" << endl;
+	cout << "					Playing " << minesweeper.getName () << endl;
+	cout << "			********************************************************" << endl;
 	minesweeper.print ();
 	
 	while (true)
@@ -192,7 +194,10 @@ int main() {
 	
 		if (minesweeper.getSquare (x, y)) {	
 				minesweeper.print();
-				cout << "Game over! Your score " << minesweeper.getScore() << '.'<<  endl;
+				
+				cout << "			********************************************************" << endl;
+				cout << "				Game over! Your score " << minesweeper.getScore() << '.'<<  endl;
+				cout << "			********************************************************" << endl;
 				break;
 			}
 	
