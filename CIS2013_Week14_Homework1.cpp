@@ -196,7 +196,7 @@ int main() {
 				minesweeper.print();
 				
 				cout << "			********************************************************" << endl;
-				cout << "				Game over! Your score " << minesweeper.getScore() << '.'<<  endl;
+				cout << "					Game over! Your score " << minesweeper.getScore() << '.'<<  endl;
 				cout << "			********************************************************" << endl;
 				break;
 			}
