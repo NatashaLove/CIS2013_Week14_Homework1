@@ -163,12 +163,33 @@ int main() {
 	cout << endl;
 	cout << "height: ";
 	cin >> y;
+	cout << "Enter amount of mines (not more than 10)for your field: " << endl;
+	cin >> mines_count;
+	cout << endl;
 	
 	MineSweeper minesweeper (name, x, y, mines_count);
 	
 	cout << "Playing " << minesweeper.getName () << endl;
+	minesweeper.print ();
 	
+	while (true)
+	{
+		cout << "Let's play! Enter coordinates : "<<endl; 
+		cout << "x ="; 
+		cin >> x;
+		cout << endl;
+		cout << "y =";
+		cin >> y;
+		cout << endl;
 	
+		if (minesweeper.getSquare (x, y)) {	
+				minesweeper.print();
+				cout << "Game over! Your score " << minesweeper.getScore() << '.'<<  endl;
+				break;
+			}
 	
+		minesweeper.print ();
+	}
+	cin >> name;
 	return 0;
 }
