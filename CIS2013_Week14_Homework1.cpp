@@ -98,7 +98,7 @@ public:
 	}
 
 
-	// Трудности с функцией печати поля..
+	
 	void print() {
 
 		cout << "  ";
@@ -122,6 +122,7 @@ public:
 
 	bool getSquare(int x, int y) 
 	{
+		 
 		int n;
 		for ( n = 0; n < mines_amount * 2; n += 2)
 		{
@@ -142,32 +143,33 @@ public:
 		selected_squares[y][x] = '.';
 		setScore();
 		return false;
+	
 	}
-
 };
 
 
 int main() {
 	string name;
-	
+	int width, height;
 	int x, y;
 	int mines_count;
 	//Game game;
-	cout << " What is the game you wanna play? ";
+	cout << "			********************************************************" << endl;
+	cout << " 					What is the game you wanna play? 		";
 	cin >> name;
-
+	cout << "			********************************************************" << endl;
 	cout << ' ' << endl;
 	cout << "Enter the board size :\n";
 	cout << "width: ";
-	cin >> x;
+	cin >> width;
 	cout << endl;
 	cout << "height: ";
-	cin >> y;
+	cin >> height;
 	cout << "Enter amount of mines (not more than 10)for your field: " << endl;
 	cin >> mines_count;
 	cout << endl;
 	
-	MineSweeper minesweeper (name, x, y, mines_count);
+	MineSweeper minesweeper (name, width, height, mines_count);
 	
 	cout << "Playing " << minesweeper.getName () << endl;
 	minesweeper.print ();
@@ -181,6 +183,12 @@ int main() {
 		cout << "y =";
 		cin >> y;
 		cout << endl;
+		
+		
+		if (y >  height || x >  width) {
+			
+			cout << "Values are not within the field, try again! " << endl;
+		} else
 	
 		if (minesweeper.getSquare (x, y)) {	
 				minesweeper.print();
