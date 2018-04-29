@@ -164,7 +164,7 @@ int main() {
 	cout << "height: ";
 	cin >> y;
 	
-	MineSweeper minesweeper (x, y, mines_count);
+	MineSweeper minesweeper (name, x, y, mines_count);
 	
 	cout << "Playing " << minesweeper.getName () << endl;
 	
