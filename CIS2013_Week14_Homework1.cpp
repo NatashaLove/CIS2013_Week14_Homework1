@@ -187,7 +187,7 @@ int main() {
 		cout << endl;
 		
 		
-		if (y >  height || x >  width) {
+		if (y >=  height || x >=  width) {
 			
 			cout << "Values are not within the field, try again! " << endl;
 		} else
